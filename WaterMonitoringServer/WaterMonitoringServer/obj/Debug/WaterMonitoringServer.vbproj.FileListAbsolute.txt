@@ -1,0 +1,13 @@
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\bin\Debug\WaterMonitoringServer.exe
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\bin\Debug\WaterMonitoringServer.pdb
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\bin\Debug\WaterMonitoringServer.xml
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.Form1.resources
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.Resources.resources
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.vbproj.GenerateResource.Cache
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.exe
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.xml
+C:\Users\Nydyy Babiera\AppData\Local\Temporary Projects\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.pdb
+D:\Default Files\Documents\Visual Studio 2008\Projects\WaterMonitoringServer\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.exe
+D:\Default Files\Documents\Visual Studio 2008\Projects\WaterMonitoringServer\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.xml
+D:\Default Files\Documents\Visual Studio 2008\Projects\WaterMonitoringServer\WaterMonitoringServer\obj\Debug\WaterMonitoringServer.pdb
