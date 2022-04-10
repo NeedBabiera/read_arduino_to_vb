@@ -116,11 +116,11 @@ Public Class Form1
 
         Dim tempValDesc As String = ""
 
-        If tempVal <= 78 Then
+        If tempVal < 26 Then
             tempValDesc = "LOW"
-        ElseIf tempVal >= 78 And tempVal <= 89 Then
+        ElseIf tempVal >= 26 And tempVal <= 32 Then
             tempValDesc = "NORMAL"
-        ElseIf tempVal >= 90 Then
+        ElseIf tempVal >= 33 Then
             tempValDesc = "HIGH"
         End If
 
