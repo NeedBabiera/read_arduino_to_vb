@@ -23,7 +23,10 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.txtData = New System.Windows.Forms.TextBox()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -37,23 +40,16 @@ Partial Class Form1
         Me.phlev_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.turb_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.date_read = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.is_clean = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.is_clean = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DGV_WaterData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'txtData
-        '
-        Me.txtData.Location = New System.Drawing.Point(524, 423)
-        Me.txtData.Multiline = True
-        Me.txtData.Name = "txtData"
-        Me.txtData.Size = New System.Drawing.Size(252, 20)
-        Me.txtData.TabIndex = 0
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 35)
+        Me.Button1.Location = New System.Drawing.Point(18, 59)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(844, 23)
+        Me.Button1.Size = New System.Drawing.Size(1339, 35)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "START"
         Me.Button1.UseVisualStyleBackColor = True
@@ -66,22 +62,53 @@ Partial Class Form1
         '
         'txtDateTime
         '
-        Me.txtDateTime.Location = New System.Drawing.Point(4, 423)
+        Me.txtDateTime.Location = New System.Drawing.Point(18, 104)
+        Me.txtDateTime.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDateTime.Name = "txtDateTime"
-        Me.txtDateTime.Size = New System.Drawing.Size(466, 20)
+        Me.txtDateTime.Size = New System.Drawing.Size(1339, 26)
         Me.txtDateTime.TabIndex = 2
         '
         'DGV_WaterData
         '
         Me.DGV_WaterData.AllowUserToAddRows = False
         Me.DGV_WaterData.AllowUserToDeleteRows = False
-        Me.DGV_WaterData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_WaterData.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DGV_WaterData.ColumnHeadersHeight = 35
         Me.DGV_WaterData.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.temp_read, Me.phlev_read, Me.turb_read, Me.temp_desc, Me.phlev_desc, Me.turb_desc, Me.date_read, Me.is_clean})
-        Me.DGV_WaterData.Location = New System.Drawing.Point(12, 64)
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_WaterData.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DGV_WaterData.Location = New System.Drawing.Point(18, 140)
+        Me.DGV_WaterData.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGV_WaterData.Name = "DGV_WaterData"
         Me.DGV_WaterData.ReadOnly = True
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_WaterData.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DGV_WaterData.RowHeadersVisible = False
-        Me.DGV_WaterData.Size = New System.Drawing.Size(844, 312)
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_WaterData.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DGV_WaterData.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DGV_WaterData.RowTemplate.Height = 35
+        Me.DGV_WaterData.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_WaterData.Size = New System.Drawing.Size(1339, 480)
         Me.DGV_WaterData.TabIndex = 3
         '
         'temp_read
@@ -162,17 +189,17 @@ Partial Class Form1
         Me.is_clean.Name = "is_clean"
         Me.is_clean.ReadOnly = True
         Me.is_clean.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.is_clean.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 450)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.DGV_WaterData)
         Me.Controls.Add(Me.txtDateTime)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.txtData)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DGV_WaterData, System.ComponentModel.ISupportInitialize).EndInit()
@@ -180,8 +207,6 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtData As Windows.Forms.TextBox
     Friend WithEvents Button1 As Windows.Forms.Button
     Friend WithEvents SerialPort1 As IO.Ports.SerialPort
     Friend WithEvents Timer1 As Windows.Forms.Timer
@@ -195,5 +220,5 @@ Partial Class Form1
     Friend WithEvents phlev_desc As Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents turb_desc As Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents date_read As Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents is_clean As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents is_clean As Windows.Forms.DataGridViewCheckBoxColumn
 End Class

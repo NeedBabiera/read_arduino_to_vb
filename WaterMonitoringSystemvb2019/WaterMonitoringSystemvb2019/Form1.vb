@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Windows.Forms
+
+Public Class Form1
     Dim member As New DatabaseClass
     Dim setup As New SetupClass
 
@@ -92,7 +94,12 @@
                 .setValues(getPHvalDesc(phValue))
                 .setValues(getTurbDsc(turbVal))
                 .setValues(dateTimeVal)
-                .setValues(1)
+                If phValue < 7 And turbVal > 50 Then
+                    .setValues(0)
+                Else
+                    .setValues(1)
+                End If
+
                 .AddRecord("TB_WaterMonitoring")
 
             End With
@@ -100,10 +107,8 @@
             DGV_WaterData.DataSource = member.getdata("TB_WaterMonitoring")
 
         Catch ex As Exception
-
+            Console.WriteLine(ex)
         End Try
-
-
 
     End Sub
 
@@ -141,11 +146,11 @@
 
         Dim phLevDesc As String = ""
 
-        If phLevVal <= 78 Then
+        If phLevVal > 7 Then
             phLevDesc = "ALKALANITY"
-        ElseIf phLevVal >= 78 And phLevVal <= 89 Then
+        ElseIf phLevVal <= 7 And phLevVal >= 7.6 Then
             phLevDesc = "SAFE"
-        ElseIf phLevVal >= 90 Then
+        ElseIf phLevVal <= 7.7 Then
             phLevDesc = "HIGH_ACIDITY"
         End If
 
@@ -157,7 +162,12 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Timer1.Start()
+
+        Dim result As DialogResult = MessageBox.Show("Start reading data from arduino?", "CONFIRMATION", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Timer1.Start()
+        End If
+
     End Sub
 
     Private Sub dateTime_Tick(sender As Object, e As EventArgs) Handles dateTime.Tick
